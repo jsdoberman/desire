@@ -142,6 +142,11 @@ function mainwindowLoad() {
 		showTabBlockes[i].classList.add('enjoy-tabs__item_active')
 		tabs[i].style.display = 'block'
 
+		tabsSliders.forEach(item => {
+			$(item).slick('reinit');
+		})
+
+
 	}
 
 	hideTabs()
