@@ -1,0 +1,44 @@
+<form action="#" class="filter-section__body">
+    <div class="filter-section__item">
+        <input class="filter-section__input" type="checkbox" value="1" name="01" id="001">
+        <label class="filter-section__label" for="001">АиР<span>(25)</span></label>
+    </div>
+    <div class="filter-section__item">
+        <input class="filter-section__input" type="checkbox" value="1" name="01" id="002">
+        <label class="filter-section__label" for="002">Булат Сергея Баранова<span>(250)</span></label>
+    </div>
+    <div class="filter-section__item">
+        <input class="filter-section__input" type="checkbox" value="1" name="01" id="003">
+        <label class="filter-section__label" for="003">Булат Умерова<span>(220)</span></label>
+    </div>
+
+</form>
+
+
+.filter-section__item
+    margin-bottom: 20px
+
+.filter-section__input
+    display: none
+    &:checked + .filter-section__label::before  //Звертаємось до наступного елемента!
+        background: red
+
+.filter-section__label
+    cursor: pointer
+    position: relative
+    padding-left: 33px
+    span
+        font-weight: 500
+        font-size: 16px
+        line-height: 20px
+        color: #E8AA31
+        margin-left: 15px
+
+    &::before
+        content: ''
+        position: absolute
+        display: block
+        width: 18px
+        height: 18px
+        border: 1px solid rgba(0, 0, 0, 0.2)
+        border-radius: 2px

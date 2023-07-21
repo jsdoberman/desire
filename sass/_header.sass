@@ -1,0 +1,249 @@
+/* ======================================header */
+.header
+    padding: 25px 0
+    background: #F2EEE9
+    position: relative
+    @media (max-width: 589.98px)
+        padding: 25px 0 15px
+
+    &__container
+        display: flex
+        align-items: center
+        justify-content: space-between
+        position: relative
+        z-index: 500
+        @media (max-width: 589.98px)
+            flex-direction: column-reverse
+            gap: 25px
+
+    &__block
+        display: flex
+        flex: 0 1 33%
+        align-items: center
+        @media (max-width: 589.98px)
+            max-width: 500px
+            width: 100%
+        &:nth-child(1)
+            gap: 70px
+            @media (max-width: 624.98px)
+                gap: 20px
+
+            @media (max-width: 589.98px)
+                justify-content: space-between
+
+        &:nth-child(2)
+            justify-content: center
+
+        &:nth-child(3)
+            justify-content: flex-end
+            @media (max-width: 589.98px)
+                display: none
+
+    &__logo
+        width: 187px
+        height: 21px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+
+    &__link
+        color: #625D5B
+        font-family: Proxima Nova
+        font-size: 11.978px
+        font-style: normal
+        font-weight: 300
+        line-height: normal
+        letter-spacing: 0.24px
+        transition: color 0.3s
+        &:hover
+            color: $colorOrange
+
+    &__menu-wrapper
+        display: flex
+        align-items: center
+        gap: 12px
+        cursor: pointer
+        transition: all 0.3s
+        &:hover
+            .burger__item
+                background-color: $colorOrange
+
+            .header__menu-name
+                color: $colorOrange
+
+    &__menu-name
+        color: $colorBrown
+        font-family: Proxima Nova
+        font-size: 11.978px
+        font-style: normal
+        font-weight: 300
+        line-height: normal
+        letter-spacing: 0.24px
+        transition: color 0.3s
+        cursor: pointer
+        &:hover
+            color: $colorOrange
+
+.lang-block
+    position: relative
+    transition: all 0.5s
+    &:hover
+        .lang-block__drop
+            opacity: 1
+            visibility: visible
+            transform: translate(0)
+
+    @media (max-width: 589.98px)
+        padding-right: 10px
+        width: 60px
+
+    &__choise
+        color: $colorBrown
+        font-family: Proxima Nova
+        font-size: 11.978px
+        font-style: normal
+        font-weight: 300
+        line-height: normal
+        letter-spacing: 0.24px
+        cursor: pointer
+        transition: color 0.3s
+        position: relative
+
+        &::after
+            content: ''
+            position: absolute
+            top: 5px
+            right: -13px
+            display: block
+            background: url('../img/icons/langdown.svg') center center / contain no-repeat
+            width: 9px
+            height: 6px
+
+    &__drop
+        position: absolute
+        opacity: 0
+        visibility: hidden
+        top: 50px
+        left: 0
+        padding: 20px
+        background: $colorBeige
+        transition: all 0.5s
+        z-index: 300
+        transform: translateY(30px)
+
+        @media (max-width: 589.98px)
+            left: -50px
+        &::after
+            content: ''
+            position: absolute
+            top: -35px
+            left: 0
+            display: block
+            background: transparent
+            width: 100%
+            height: 36px
+        a
+            color: $colorBrown
+            font-family: Proxima Nova
+            font-size: 11.978px
+            font-style: normal
+            font-weight: 300
+            line-height: normal
+            letter-spacing: 0.24px
+            cursor: pointer
+            transition: color 0.3s
+            position: relative
+            margin-bottom: 35px
+            &:last-child
+                margin-bottom: 0
+
+.burger
+    display: block
+    align-items: flex-end
+    flex-direction: column
+    cursor: pointer
+    z-index: 2000
+    transition: all 0.3s
+
+    &__item
+        margin-bottom: 4px
+        border-radius: 3px
+        background: $colorBrown
+        height: 1px
+        width: 15px
+
+    &__item:last-child
+        margin-bottom: 0
+
+/* ======================================main-menu */
+
+.menu-block
+    position: absolute
+    top: 60px
+    left: 20px
+    z-index: 400
+    min-width: 240px
+    background: $colorBeige
+    padding: 28px 10px 35px 40px
+    transform: translateY(60px)
+    opacity: 0
+    visibility: hidden
+    transition: all 0.5s
+    @media (max-width: 589.98px)
+        top: 95px
+
+    &_active
+        transform: translateY(0)
+        opacity: 1
+        visibility: visible
+        transition: all 0.5s
+
+    &__menu
+
+    &__title
+        color: $colorBrown
+        font-family: Proxima Nova
+        font-size: 11.978px
+        font-style: normal
+        font-weight: 300
+        line-height: normal
+        letter-spacing: 0.24px
+        margin-bottom: 20px
+        padding-left: 26px
+        position: relative
+        cursor: pointer
+        &::before
+            content: ''
+            display: block
+            position: absolute
+            top: -3px
+            left: -4px
+            width: 16px
+            height: 13px
+            cursor: pointer
+            padding: 8px
+            background: url('../img/icons/close.svg') center center / contain no-repeat
+
+    &__list
+
+    &__item
+        margin-bottom: 12px
+
+        &:last-child
+            margin-bottom: 0
+
+    &__link
+        color: $colorBrown
+        font-family: Proxima Nova
+        font-size: 11.978px
+        font-style: normal
+        font-weight: 300
+        line-height: normal
+        letter-spacing: 0.24px
+        padding: 3px 0
+        transition: all 0.5s
+        &:hover
+            color: $colorOrange
+            transition: all 0.5s

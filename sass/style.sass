@@ -1,0 +1,1123 @@
+@import "fonts"
+@import "null"
+@import "header"
+@import "footer"
+@import "bem-block"
+
+/* @import "input-range" Вибір діапазона (input type='range')*/
+
+.main-slider
+    position: relative
+
+    &__item
+
+    .slick-arrow
+        position: absolute
+        bottom: 30px
+        left: 400px
+        font-size: 0
+        border-radius: none
+        background: none
+
+    .slick-dots
+        position: absolute
+        bottom: 20px
+        transform: translateX(-50%)
+        left: 50vw
+        display: flex
+        max-width: 970px
+        width: 100%
+        display: flex
+        justify-content: space-between
+        background: rgba(255, 255, 255, 0.5)
+
+        li
+            height: 3px
+            cursor: pointer
+
+            button
+                font-size: 0
+                width: 100%
+                background: none
+                margin-right: 5px
+                position: relative
+                &::before
+                    content: ''
+                    width: 100%
+                    height: 30px
+                    background: transparent
+                    display: block
+                    position: absolute
+                    top: -26px
+                    left: 0
+
+        .slick-active
+            background: $colorOrange
+
+.item-side
+    position: relative
+    height: 600px
+    padding: 160px 0 20px
+    &__img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 600px
+        object-fit: cover
+        z-index: -2
+
+    &__slider-logo
+        width: 111px
+        height: 31px
+        object-fit: cover
+        position: absolute
+        bottom: 50px
+        left: 26vw
+
+    &__title
+        color: #FFF
+        text-align: center
+        font-family: Aboreto
+        font-size: 72px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        margin-bottom: 15px
+
+    &__sub-title
+        color: #FFF
+        text-align: center
+        font-family: Aboreto
+        font-size: 24px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+
+    &__btn
+        color: #FFF
+        text-align: center
+        font-family: Proxima Nova
+        font-size: 13.781px
+        font-style: normal
+        font-weight: 300
+        line-height: normal
+        letter-spacing: 1.378px
+        text-transform: uppercase
+        margin: 30px auto
+        display: block
+        background: $colorOrange
+        width: 196px
+        height: 34px
+        transition: all 0.5s
+        &:hover
+            background: $colorGreen
+
+/* ______________________________________________ */
+
+.concept
+    padding: 86px 0 112px
+    background: url('../img/decor-d.png') center -13px / cover no-repeat #FFF
+
+    @media (max-width: 676.98px)
+        padding: 36px 0 52px
+    &__container
+
+    &__title
+        margin-bottom: 50px
+
+    &__block-wrapper
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        column-gap: 20px
+        row-gap: 40px
+
+.concept-item
+    flex: 1 1 289px
+
+    &:hover
+        .concept-item__img img
+            transform: scale(1.1)
+            transition: all 0.5s
+
+    &__img
+        width: 100%
+        height: 80px
+        margin-bottom: 29px
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: all 0.5s
+
+    &__title
+        margin-bottom: 6px
+
+    &__category
+        margin-bottom: 13px
+        color: $colorOrange
+        text-align: center
+        font-family: Proxima Nova
+        font-size: 8.571px
+        font-style: normal
+        font-weight: 700
+        line-height: normal
+        letter-spacing: 1.971px
+        text-transform: uppercase
+
+    &__descr
+        color: $colorBrown
+        text-align: center
+        font-family: Proxima Nova
+        font-size: 12px
+        font-style: normal
+        font-weight: 300
+        line-height: normal
+        padding: 0 10px
+
+/* ______________________________________________ */
+
+.meets
+    background: $colorBeige
+    padding: 30px 0 10px
+
+    &__container
+
+    &__title
+        margin-bottom: 50px
+
+.meets-block
+    display: flex
+    margin-bottom: 40px
+    position: relative
+    &:hover
+        .meets-block__img img
+            transform: scale(1.05)
+            transition: all 0.5s
+
+    @media (max-width: 676.98px)
+        flex-direction: column
+
+    &:nth-child(even)
+        flex-direction: row-reverse
+        @media (max-width: 676.98px)
+            flex-direction: column
+
+    &__img
+        position: relative
+        flex: 0 1 50%
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: all 0.5s
+
+    &__label
+        position: absolute
+        top: 10px
+        right: 0
+        background: $colorGreen
+        min-width: 130px
+        height: 30px
+        color: #FFF
+        font-family: Proxima Nova
+        font-size: 9px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        letter-spacing: 1.971px
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0 4px
+        text-transform: uppercase
+
+    &__info
+        flex: 0 1 50%
+        background: #FFF
+        padding: 10px 35px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+    &__cotegory
+        color: $colorOrange
+        text-align: center
+        font-family: Proxima Nova
+        font-size: 9px
+        font-style: normal
+        font-weight: 700
+        line-height: normal
+        letter-spacing: 1.9px
+        text-transform: uppercase
+        margin-bottom: 13px
+
+    &__title
+        margin-bottom: 13px
+
+    &__descr
+        color: #625D5B
+        text-align: center
+        font-family: Proxima Nova
+        font-size: 11.429px
+        font-style: normal
+        font-weight: 300
+        line-height: normal
+
+/* ______________________________________________ */
+
+.resid-apart-count
+    background: $colorBeige
+    padding: 30px 0
+
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        gap: 38px
+        @media (max-width: 691.98px)
+            flex-direction: column
+
+    &__block
+        flex: 0 1 50%
+        border: 1px solid $colorGreen
+        min-height: 398px
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        padding: 15px
+
+        &:nth-child(even)
+            border: 1px solid $colorOrange
+
+        @media (max-width: 751.98px)
+            min-height: 315px
+        @media (max-width: 691.98px)
+            min-height: 250px
+
+    &__coount
+        color: $colorBrown
+        text-align: center
+        font-family: Aboreto
+        font-size: 34.286px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        margin-bottom: 3px
+
+    &__title
+        margin-bottom: 29px
+
+    &__descr
+        color: $colorBrown
+        text-align: center
+        font-family: Proxima Nova
+        font-size: 11.429px
+        font-style: normal
+        font-weight: 300
+        line-height: normal
+        padding: 0 45px
+        @media (max-width: 413.98px)
+            padding: 0 10px
+/* ______________________________________________ */
+
+.benefits
+    background: $colorBeige
+    padding: 30px 0
+
+    &__container
+
+    &__title
+        margin-bottom: 70px
+
+    &__wrapper
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        column-gap: 125px
+        row-gap: 100px
+
+.benefits-item
+    flex: 0 1 193px
+    position: relative
+    z-index: 3
+    &:hover
+        .benefits-item__num
+            color: rgba(58, 138, 99, 0.3)
+            transition: all 0.5s
+
+    &__num
+        color: #FFF
+        font-family: Aboreto
+        font-size: 200px
+        font-style: normal
+        font-weight: 400
+        position: absolute
+        display: flex
+        top: -74px
+        left: 51px
+        z-index: -2
+        transition: all 0.5s
+
+    &__category
+        color: $colorOrange
+        text-align: center
+        font-family: Proxima Nova
+        font-size: 8.571px
+        font-style: normal
+        font-weight: 700
+        line-height: normal
+        letter-spacing: 1.971px
+        text-transform: uppercase
+        margin-bottom: 13px
+
+    &__title
+        color: $colorBrown
+        text-align: center
+        font-family: Aboreto
+        font-size: 17.143px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+
+/* ______________________________________________ */
+
+.investment
+    background: $colorBeige
+    padding: 50px 0 30px
+    &__container
+
+    &__title
+        margin-bottom: 30px
+
+.investment-item
+    display: flex
+    height: 100%
+    position: relative
+    margin-bottom: 40px
+    background: #fff
+    @media (max-width: 676.98px)
+        flex-direction: column
+
+    &:nth-child(odd)
+        flex-direction: row-reverse
+        @media (max-width: 676.98px)
+            flex-direction: column
+
+    &__img
+        flex: 0 1 40%
+        position: relative
+        height: 470px
+        img
+            width: 100%
+            height: 470px
+            object-fit: cover
+            @media (max-width: 676.98px)
+                height: 350px
+
+    &__img-info
+        position: absolute
+        top: 40px
+        left: 40px
+        z-index: 3
+
+    &__img-title
+        color: #FFF
+        font-family: Aboreto
+        font-size: 26.109px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        margin-bottom: 9px
+
+    &__img-subtitle
+        color: #FFF
+        font-family: Proxima Nova
+        font-size: 13.167px
+        font-style: normal
+        font-weight: 700
+        line-height: normal
+        letter-spacing: 2.633px
+        text-transform: uppercase
+
+    &__info-block
+        flex: 0 1 60%
+        padding: 110px 30px
+        background: #fff
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        @media (max-width: 676.98px)
+            padding: 50px 30px
+
+    &__main-title
+        color: #625D5B
+        text-align: center
+        font-family: Aboreto
+        font-size: 26.109px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        margin-bottom: 8px
+    &__descr
+        color: #625D5B
+        text-align: center
+        font-family: Proxima Nova
+        font-size: 11.429px
+        font-style: normal
+        font-weight: 300
+        line-height: normal
+        margin-bottom: 32px
+
+    &__btn
+        color: #FFF
+        text-align: center
+        font-family: Proxima Nova
+        font-size: 13.781px
+        font-style: normal
+        font-weight: 300
+        line-height: normal
+        letter-spacing: 1.378px
+        text-transform: uppercase
+        width: 240px
+        height: 43px
+        background: $colorOrange
+        transition: all 0.5s
+
+        &:hover
+            background: $colorGreen
+            transition: all 0.5s
+
+/* ______________________________________________ */
+
+.roi
+    padding: 20px 0 40px
+    &__container
+
+    &__title
+        margin-bottom: 67px
+
+    &__wrapper
+        display: flex
+        justify-content: center
+        gap: 38px
+        @media (max-width: 751.98px)
+            flex-wrap: wrap
+
+.roi-item
+    flex: 0 1 50%
+    border: 1px solid $colorGreen
+    display: flex
+    flex-direction: column
+
+    &:hover
+        .roi-item__img img
+            transform: scale(1.1)
+            transition: all 0.5s
+
+    @media (max-width: 751.98px)
+        flex: 1 1 50%
+
+    &_orange
+        border: 1px solid $colorOrange
+
+    &__label
+        width: 197px
+        height: 49px
+        background: $colorGreen
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 auto
+        margin-bottom: 64px
+        color: #FFF
+        font-family: Proxima Nova
+        font-size: 12.857px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        letter-spacing: 2.957px
+
+        &_orange
+            background: $colorOrange
+    &__title
+        color: $colorBrown
+        text-align: center
+        font-family: Aboreto
+        font-size: 34.286px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+
+    &__descr
+        color: $colorBrown
+        text-align: center
+        font-family: Proxima Nova
+        font-size: 11.429px
+        font-style: normal
+        font-weight: 300
+        line-height: normal
+        padding: 0 75px
+        margin-bottom: 30px
+        flex: 1 1 auto
+        @media (max-width: 886.98px)
+            padding: 0 25px
+
+    &__img
+        width: 100%
+        height: 160px
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: all 0.5s
+/* ______________________________________________ */
+
+.residences
+    background: #FFF
+    padding: 50px 0 70px
+
+    &__container
+
+    &__title
+        margin-bottom: 43px
+
+    &__wrapper
+        display: flex
+        gap: 20px
+        position: relative
+
+        .slick-dots
+            position: absolute
+            bottom: -40px
+            left: 50%
+            transform: translateX(-50%)
+            display: flex
+            gap: 20px
+
+            button
+                font-size: 0
+                width: 8px
+                height: 12px
+                border-radius: 100%
+                background: $colorBeige
+                transition: all 0.5s
+
+            .slick-active
+                button
+                    background: $colorOrange
+                    transition: all 0.5s
+
+.residences-item
+
+    background: $colorBeige
+    padding: 10px 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 0 10px
+    &:hover
+        .residences-item__img img
+            transform: scale(1.1)
+            transition: all 0.5s
+
+    &__title
+        color: $colorBrown
+        text-align: center
+        font-family: Aboreto
+        font-size: 22px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        margin-bottom: 20px
+
+    &__img
+        width: 200px
+        height: 200px
+        margin-bottom: 5px
+        flex: 1 1 auto
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+            transition: all 0.5s
+
+    &__from
+        color: $colorBrown
+        margin-bottom: 15px
+        text-align: center
+        font-family: Proxima Nova
+        font-size: 13.167px
+        font-style: normal
+        font-weight: 700
+        line-height: normal
+        letter-spacing: 2.633px
+        text-transform: uppercase
+
+    &__btn
+        color: #FFF
+        text-align: center
+        font-family: Proxima Nova
+        font-size: 13.781px
+        font-style: normal
+        font-weight: 300
+        line-height: normal
+        letter-spacing: 1.378px
+        text-transform: uppercase
+        background: $colorOrange
+        height: 40px
+        width: 180px
+        transition: all 0.5s
+        &:hover
+            background: $colorGreen
+            transition: all 0.5s
+
+/* ______________________________________________ */
+
+.location
+    padding: 55px 0 20px
+
+    &__container
+
+    &__title
+        margin-bottom: 35px
+
+    &__img-block
+        position: relative
+        min-height: 470px
+        img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 2
+            object-fit: cover
+
+    &__info-block
+        position: absolute
+        top: 0
+        right: 0
+        width: 50%
+        background: #fff
+        padding: 32px 27px
+        z-index: 3
+
+        @media (max-width: 776.98px)
+            width: 70%
+
+        @media (max-width: 619.98px)
+            bottom: 0
+            top: auto
+            right: 50%
+            transform: translateX(50%)
+
+        @media (max-width: 619.98px)
+            width: 90%
+            padding: 32px 10px
+
+        p
+            color: $colorBrown
+            text-align: center
+            font-family: Proxima Nova
+            font-size: 11.429px
+            font-style: normal
+            font-weight: 300
+            line-height: normal
+
+    &__title-info-block
+        color: $colorGreen
+        text-align: center
+        font-family: Proxima Nova
+        font-size: 11.429px
+        font-style: normal
+        font-weight: 600
+        line-height: normal
+        letter-spacing: 1.143px
+        text-transform: uppercase
+        margin-bottom: 12px
+
+/* ______________________________________________ */
+
+.benefits-antalya
+    padding: 37px 0 50px
+
+    &__container
+        display: flex
+        gap: 40px
+        @media (max-width: 653.98px)
+            flex-direction: column
+            gap: 1px
+
+    &__wrapper
+        display: flex
+        column-gap: 66px
+        flex-wrap: wrap
+        justify-content: space-between
+        row-gap: 38px
+        flex: 0 1 100%
+        @media (max-width: 922.98px)
+            column-gap: 25px
+
+        @media (max-width: 836.98px)
+            column-gap: 66px
+            justify-content: center
+
+        @media (max-width: 471.98px)
+            column-gap: 10px
+
+    &__wrapper-mini
+        flex: 0 1 200px
+        display: flex
+        justify-content: center
+        align-items: center
+
+        .benefits-block__title
+            margin-bottom: 22px
+
+.benefits-block
+    display: flex
+    flex-direction: column
+    flex: 0 1 188px
+    @media (max-width: 416.98px)
+        flex: 0 1 140px
+
+    &__title
+        color: $colorOrange
+        text-align: center
+        font-family: Proxima Nova
+        font-size: 11.429px
+        font-style: normal
+        font-weight: 600
+        line-height: normal
+        letter-spacing: 1.143px
+        text-transform: uppercase
+        margin-bottom: 5px
+
+    &__descr
+        color: $colorBrown
+        text-align: center
+        font-family: Proxima Nova
+        font-size: 11.429px
+        font-style: normal
+        font-weight: 300
+        line-height: normal
+/* ______________________________________________ */
+
+.enjoy
+    background: #fff
+    padding: 39px 0 37px
+
+    &__container
+
+    &__title
+        margin-bottom: 40px
+
+.enjoy-show-tab
+    margin-bottom: 25px
+
+    &__block
+        margin-bottom: 40px
+        position: relative
+        .slick-arrow
+            position: absolute
+            bottom: 25px
+            z-index: 5
+            background: transparent
+            font-size: 30px
+            color: #fff
+            transition: all 0.5s
+            &:hover
+                color: $colorOrange
+                transition: all 0.5s
+
+        .slick-next
+            right: 40%
+
+        .slick-prev
+            left: 40%
+
+    &__img
+        width: 100%
+        height: 544px
+        @media (max-width: 666.98px)
+            height: 444px
+
+        @media (max-width: 383.98px)
+            height: 390px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+.enjoy-tabs
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    column-gap: 103px
+    row-gap: 20px
+    @media (max-width: 524.98px)
+        column-gap: 80px
+
+    @media (max-width: 383.98px)
+        column-gap: 30px
+
+    &__item
+        display: flex
+        align-items: center
+        gap: 5px
+        opacity: 0.3
+        cursor: pointer
+        transition: all 0.5s
+        &:hover
+            opacity: 1
+            transition: all 0.5s
+
+        &_active
+            opacity: 1
+            transition: all 0.5s
+
+    &__num
+        color: $colorGreen
+        text-align: center
+        font-family: Aboreto
+        font-size: 17.847px
+        font-style: normal
+        font-weight: 400
+
+    &__name
+
+        color: $colorBrown
+        font-family: Aboreto
+        font-size: 17.847px
+        font-style: normal
+        font-weight: 400
+        line-height: 0%
+
+/* ______________________________________________ */
+
+.developers
+    padding: 60px 0
+
+    &__container
+
+    &__title
+        margin-bottom: 60px
+
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        gap: 15px
+        @media (max-width: 836.98px)
+
+            row-gap: 50px
+
+.developers-item
+    flex: 0 1 259px
+    @media (max-width: 836.98px)
+        flex: 1 1 259px
+
+    &:hover
+        .developers-item__img img
+            transform: scale(1.1)
+            transition: all 0.5s
+
+    &__img
+        flex: 0 1 218px
+        height: 170px
+        margin-bottom: 39px
+        overflow: hidden
+        padding: 0 20px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: all 0.5s
+
+    &__title
+        color: $colorGreen
+        text-align: center
+        font-family: Proxima Nova
+        font-size: 14px
+        font-style: normal
+        font-weight: 700
+        line-height: normal
+        letter-spacing: 3.22px
+        text-transform: uppercase
+        margin-bottom: 15px
+
+    &__descr
+        color: $colorBrown
+        text-align: center
+        font-family: Proxima Nova
+        font-size: 11.429px
+        font-style: normal
+        font-weight: 300
+        line-height: normal
+
+/* ______________________________________________ */
+
+.partners
+    padding: 10px 0 50px
+
+    &__container
+
+    &__title
+        margin-bottom: 41px
+
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        row-gap: 40px
+        column-gap: 20px
+        @media (max-width: 484.98px)
+            justify-content: center
+
+    &__block
+
+    &__block-title
+        color: $colorBrown
+        font-family: Aboreto
+        font-size: 12.889px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        margin-bottom: 18px
+        @media (max-width: 484.98px)
+            text-align: center
+
+    &__block-wrapper
+        display: flex
+        gap: 30px
+
+    &__partner
+
+    &__partner-img
+        width: 134px
+        height: 65px
+        margin-bottom: 12px
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    &__partner-name
+        color: $colorBrown
+        text-align: center
+        font-family: Aboreto
+        font-size: 12.889px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+
+/* ______________________________________________ */
+.map
+
+    &__container
+
+    &__title
+        margin-bottom: 34px
+
+    &__sub-title
+        color: $colorBrown
+        font-family: Aboreto
+        font-size: 12.889px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        margin-bottom: 45px
+
+    &__block
+        height: 459px
+
+/* ______________________________________________ */
+
+.footer-form-block
+    padding-top: 60px
+    background: url('../img/decor-w.png') center center / cover no-repeat
+
+    &__title
+        color: $colorBrown
+        text-align: center
+        font-family: Aboreto
+        font-size: 63px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        margin-bottom: 54px
+        @media (max-width: 474.98px)
+            font-size: 46px
+            margin-bottom: 34px
+
+    &__sub-title
+        color: $colorBrown
+        text-align: center
+        font-family: Aboreto
+        font-size: 17.847px
+        font-style: normal
+        font-weight: 400
+        line-height: 100%
+        margin-bottom: 50px
+        @media (max-width: 474.98px)
+            font-size: 14px
+
+.footer-form
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &__input
+        max-width: 440px
+        width: 100%
+        border: none
+        background: transparent
+        border-bottom: 1px solid rgba(58, 138, 99, 0.4)
+        height: 57px
+        color: $colorBrown
+        outline: none
+        font-family: Aboreto
+        font-size: 12.889px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        text-align: center
+        padding: 0 15px
+
+        &::placeholder
+            color: $colorBrown
+            text-align: center
+            font-family: Aboreto
+            font-size: 12.889px
+            font-style: normal
+            font-weight: 400
+            line-height: normal
+
+    &__btn
+        margin-top: 70px
+        height: 114px
+        background: $colorOrange
+        width: 100%
+        color: #EEE6DE
+        text-align: center
+        font-family: Aboreto
+        font-size: 17.847px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        transition: all 0.5s
+
+        &:hover
+            background: $colorGreen
+            transition: all 0.5s
+        @media (max-width: 474.98px)
+            margin-top: 50px

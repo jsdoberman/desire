@@ -1,0 +1,155 @@
+.footer
+    background: $colorBrown
+    padding: 70px 0 100px
+    @media (max-width: 882.98px)
+        padding: 50px 0 50px
+
+    &__container
+        display: flex
+        justify-content: space-between
+        @media (max-width: 882.98px)
+            flex-direction: column
+            align-items: center
+            gap: 40px
+
+    &__block
+        flex: 0 1 33%
+        &:last-child
+            display: flex
+            flex-direction: column
+            align-items: center
+
+        img
+
+            width: 179px
+            height: 102px
+            object-fit: contain
+
+    &__title
+        color: $colorBeige
+        text-align: center
+        font-family: Aboreto
+        font-size: 18px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        text-align: center
+        margin-bottom: 20px
+
+    &__wrapper
+        display: flex
+        gap: 40px
+
+    &__menu
+
+    &__item
+        margin-bottom: 10px
+
+    &__link
+        color: $colorBeige
+        text-align: center
+        font-family: Montserrat
+        font-size: 11px
+        font-style: normal
+        font-weight: 400
+        transition: all 0.5s
+        padding: 9px 0
+        &:hover
+            color: $colorOrange
+            transition: all 0.5s
+
+    &__info
+        color: $colorBeige
+        text-align: center
+        font-family: Montserrat
+        font-size: 11px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        margin-bottom: 18px
+        transition: all 0.5s
+        &:hover
+            color: $colorOrange
+            transition: all 0.5s
+
+.pop-up
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    background: rgba(0, 0, 0, 0.363)
+    overflow: auto
+    display: none
+
+    &__block
+        padding: 45px 0 25px
+        position: absolute
+        top: 140px
+        left: 50%
+        transform: translateX(-50%)
+        max-width: 640px
+        width: 100%
+        min-height: 319px
+        background: $colorBeige
+        margin-bottom: 20px
+
+        .footer-form__btn
+            width: 240px
+            height: 44px
+            margin-top: 25px
+
+        .footer-form
+            background: url('../img/decor-w.png') center center / cover no-repeat
+
+        .footer-form__input
+            max-width: 440px
+            width: 100%
+            border: none
+            background: transparent
+            border-bottom: 1px solid rgba(58, 138, 99, 0.4)
+            height: 57px
+            color: $colorBrown
+            outline: none
+            font-family: Aboreto
+            font-size: 12.889px
+            font-style: normal
+            font-weight: 400
+            line-height: normal
+            text-align: center
+            padding: 0 15px
+
+    &__close
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: 20px
+        right: 20px
+        transition: all 0.5s
+        width: 30px
+        height: 30px
+        cursor: pointer
+        &:hover
+            transform: rotate(90deg)
+            transition: all 0.5s
+
+        span
+            position: absolute
+            height: 3px
+            width: 25px
+            background: $colorOrange
+            &:nth-child(1)
+                transform: rotate(45deg)
+            &:nth-child(2)
+                transform: rotate(-45deg)
+
+    &__title
+        color: $colorBrown
+        text-align: center
+        font-family: Aboreto
+        font-size: 36px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        margin-bottom: 26px
