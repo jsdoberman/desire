@@ -417,6 +417,21 @@ button {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.footer__sub-logo-wrapper {
+  display: flex;
+  width: 180px;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__logo-dev {
+  flex: 0 1 33%;
+}
+.footer__logo-dev img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .footer__title {
   color: #F2EEE9;
   text-align: center;
@@ -463,6 +478,12 @@ button {
 .footer__info:hover {
   color: #E1886C;
   transition: all 0.5s;
+}
+.footer__soc a {
+  margin-right: 15px;
+}
+.footer__soc a:last-child {
+  margin-right: 0;
 }
 
 .pop-up {
@@ -627,7 +648,17 @@ button {
 .item-side {
   position: relative;
   height: 600px;
-  padding: 160px 0 20px;
+  padding: 180px 0 20px;
+}
+@media (max-width: 534.98px) {
+  .item-side {
+    padding: 100px 0 20px;
+  }
+}
+@media (max-width: 441.98px) {
+  .item-side {
+    padding: 60px 0 20px;
+  }
 }
 .item-side__img {
   position: absolute;
@@ -639,14 +670,19 @@ button {
      object-fit: cover;
   z-index: -2;
 }
-.item-side__slider-logo {
-  width: 111px;
-  height: 31px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: absolute;
-  bottom: 50px;
-  left: 26vw;
+.item-side__logo-wrapper {
+  background: rgba(242, 238, 233, 0.6);
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 50px;
+  display: inline-flex;
+  gap: 20px;
+}
+.item-side__logo-wrapper img {
+  max-width: 111px;
+  height: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .item-side__title {
   color: #FFF;
@@ -1074,6 +1110,9 @@ button {
   font-weight: 400;
   line-height: normal;
   margin-bottom: 8px;
+}
+.investment-item__main-title span {
+  font-size: 18px;
 }
 .investment-item__descr {
   color: #625D5B;

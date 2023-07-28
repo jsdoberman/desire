@@ -25,6 +25,20 @@
             height: 102px
             object-fit: contain
 
+    &__sub-logo-wrapper
+        display: flex
+        width: 180px
+        gap: 15px
+        justify-content: space-between
+        align-items: center
+
+    &__logo-dev
+        flex: 0 1 33%
+
+        img
+            width: 100%
+            object-fit: contain
+
     &__title
         color: $colorBeige
         text-align: center
@@ -71,6 +85,12 @@
         &:hover
             color: $colorOrange
             transition: all 0.5s
+
+    &__soc
+        a
+            margin-right: 15px
+            &:last-child
+                margin-right: 0
 
 .pop-up
     position: fixed
